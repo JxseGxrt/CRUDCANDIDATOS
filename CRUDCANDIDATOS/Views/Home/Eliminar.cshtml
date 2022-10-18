@@ -1,0 +1,77 @@
+﻿@model CRUDCANDIDATOS.Models.Candidate
+
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-danger">¿Está seguro de eliminar el candidato?</h3>
+
+
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="Eliminar" asp-controller="Home" method="post">
+            <input type="hidden" asp-for="IDCandidate" />
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Name">Nombre</label>
+                <input class="form-control form-control-sm" asp-for="Name" type="text" />
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Surname">Apellidos</label>
+                <input class="form-control form-control-sm" asp-for="Surname" type="text" />
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Birthdate">Fecha de Nacimiento</label>
+                <input class="form-control form-control-sm" asp-for="Birthdate" type="text" />
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Email">Correo</label>
+                <input class="form-control form-control-sm" asp-for="Email" type="text" />
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5>Lista de Candidatos</h5>
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-success btn-sm" asp-action="Candidato_Detalle" asp-controller="Home" asp-route-idCandidato="0">Añadir</a>
+                    <hr />
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Compañia</th>
+                                <th>Puesto</th>
+                                <th>Descripcion</th>
+                                <th>Salairo</th>
+                                <th>Desde</th>
+                                <th>Hasta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.Experience != null)
+                            {
+                                @foreach (var item in Model.Experience)
+                                {
+                                    <tr>
+                                        <td>@item.Company</td>
+                                        <td>@item.Job</td>
+                                        <td>@item.Descripcion</td>
+                                        <td>@item.Salary</td>
+                                        <td>@item.BeginDate</td>
+                                        <td>@item.EndDate</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div cite="mb-2">
+                   <button class="btn btn-primary btn-sm w-25" type="submit">Eliminar</button>
+                    <a class="btn btn-dark btn-sm" asp-action="Index" asp-controller="Home">Volver</a>
+                <hr />
+            </div>
+        </form>
+    </div>
+</div>

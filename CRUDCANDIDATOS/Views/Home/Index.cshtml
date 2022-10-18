@@ -1,0 +1,47 @@
+﻿@model List<CRUDCANDIDATOS.Models.Candidate>
+@{
+    ViewData["Title"] = "Administrar Candidatos";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5>Lista de Candidatos</h5>
+    </div>
+    <div class="card-body">
+        <a class="btn btn-success btn-sm" asp-action="Candidato_Detalle" asp-controller="Home" asp-route-idCandidato="0">Añadir</a>
+        <hr />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Fecha de Cumpleaños</th>
+                <th>Email</th>
+                <th>Fec. Ingreso</th>
+                <th>Fec. Modificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model){
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Surname</td>
+                    <td>@item.Birthdate</td>
+                    <td>@item.Email</td>
+                    <td>@item.InserDate</td>
+                    <td>@item.ModifyDate</td>
+                     <td>
+                        <a class="btn btn-primary btn-sm" asp-action="Candidato_Detalle" asp-controller="Home" asp-route-idCandidato="@item.IDCandidate">Editar</a>
+                            <a class="btn btn-danger btn-sm" asp-action="Eliminar" asp-controller="Home" asp-route-idCandidato="@item.IDCandidate">Elinar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>  
+    </div>
+</div>
