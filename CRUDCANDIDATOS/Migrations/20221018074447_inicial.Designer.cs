@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRUDCANDIDATOS.Migrations
 {
-    [DbContext(typeof(CandidatosDbContext))]
+    [DbContext(typeof(CandidatesDbContext))]
     [Migration("20221018074447_inicial")]
     partial class inicial
     {

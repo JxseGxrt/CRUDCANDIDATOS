@@ -1,0 +1,64 @@
+﻿@model CRUDCANDIDATOS.Models.ViewModels.CandidateExViewModel
+
+@{
+    ViewData["Title"] = "Experiencia_Detalle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if (Model.IDCandidateExperience == 0)
+{
+    <h1>Añadir Experiencia</h1>
+}
+else
+{
+    <h1>Editar Experiencia</h1>
+}
+
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="Experience_Detail" asp-controller="Experience" method="post">
+            <input type="hidden" asp-for="@Model.IDCandidateExperience" />
+            <input type="hidden" asp-for="@Model.IdCandidate" />
+            <input type="hidden" asp-for="@Model.InsertDate" />
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Company">Compañia</label>
+                <input class="form-control form-control-sm" asp-for="@Model.Company" type="text" />
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Job">Puesto</label>
+                <input class="form-control form-control-sm" asp-for="@Model.Job" type="text" />
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Descripcion">Descripcion</label>
+                <input class="form-control form-control-sm" asp-for="@Model.Descripcion" type="text" />
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Salary">Salario</label>
+                <input class="form-control form-control-sm" asp-for="@Model.Salary" type="number" />
+            </div>
+                   <div cite="mb-2">
+                <label class="form-label" asp-for="BeginDate">Fec. Inicio</label>
+                <input class="form-control form-control-sm" asp-for="@Model.BeginDate" type="date" />
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="EndDate">Fec. Fin</label>
+                <input class="form-control form-control-sm" asp-for="@Model.EndDate" type="date" />
+            </div>
+            <hr />
+            <div cite="mb-2">
+                @if (Model.IDCandidateExperience == 0)
+                {
+                    <button class="btn btn-primary btn-sm w-25" type="submit">Crear</button>
+                }
+                else
+                {
+                    <button class="btn btn-primary btn-sm w-25" type="submit">Actualizar</button>
+
+                }
+                <a class="btn btn-dark btn-sm" asp-action="Candidate_Detail" asp-controller="Candidate" asp-route-idCandidate="@Model.IdCandidate">Volver</a>
+                <hr />
+            </div>
+        </form>
+    </div>
+</div>

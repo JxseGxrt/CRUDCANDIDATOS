@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRUDCANDIDATOS.Migrations
 {
-    [DbContext(typeof(CandidatosDbContext))]
+    [DbContext(typeof(CandidatesDbContext))]
     partial class CandidatosDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -15,16 +15,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\josik\source\repos\CRUDCANDIDATOS\CRUDCANDIDATOS
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/josik/source/repos/CRUDCANDIDATOS/CRUDCANDIDATOS/Views/Home/Candidato_Detalle.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYW5kaWRhdG9fRGV0YWxsZS5jc2h0bWw=
+[C:/Users/josik/source/repos/CRUDCANDIDATOS/CRUDCANDIDATOS/Views/Candidate/Candidate_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlXENhbmRpZGF0ZV9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josik/source/repos/CRUDCANDIDATOS/CRUDCANDIDATOS/Views/Home/Eliminar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFbGltaW5hci5jc2h0bWw=
+[C:/Users/josik/source/repos/CRUDCANDIDATOS/CRUDCANDIDATOS/Views/Candidate/Candidate_Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlXENhbmRpZGF0ZV9EZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josik/source/repos/CRUDCANDIDATOS/CRUDCANDIDATOS/Views/Home/Experiencia_Detalle.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFeHBlcmllbmNpYV9EZXRhbGxlLmNzaHRtbA==
+[C:/Users/josik/source/repos/CRUDCANDIDATOS/CRUDCANDIDATOS/Views/Candidate/Candidate_Query.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlXENhbmRpZGF0ZV9RdWVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josik/source/repos/CRUDCANDIDATOS/CRUDCANDIDATOS/Views/Experience/Experience_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZVxFeHBlcmllbmNlX0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josik/source/repos/CRUDCANDIDATOS/CRUDCANDIDATOS/Views/Experience/Experience_Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZVxFeHBlcmllbmNlX0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josik/source/repos/CRUDCANDIDATOS/CRUDCANDIDATOS/Views/Experience/Experience_Query.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZVxFeHBlcmllbmNlX1F1ZXJ5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/josik/source/repos/CRUDCANDIDATOS/CRUDCANDIDATOS/Views/Home/Index.cshtml]

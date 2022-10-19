@@ -1,0 +1,48 @@
+﻿@model CRUDCANDIDATOS.Models.ViewModels.CandidateExViewModel
+
+@{
+    ViewData["Title"] = "Experience_Query";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Experiencia del Candidato</h1>
+
+
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="Experience_Detail" asp-controller="Experience" method="post">
+            <input type="hidden" asp-for="@Model.IDCandidateExperience" />
+            <input type="hidden" asp-for="@Model.IdCandidate" />
+            <input type="hidden" asp-for="@Model.InsertDate" />
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Company">Compañia</label>
+                <input class="form-control form-control-sm" asp-for="@Model.Company" type="text" readonly="readonly"/>
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Job">Puesto</label>
+                <input class="form-control form-control-sm" asp-for="@Model.Job" type="text" readonly="readonly" />
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Descripcion">Descripcion</label>
+                <input class="form-control form-control-sm" asp-for="@Model.Descripcion" type="text" readonly="readonly"/>
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="Salary">Salario</label>
+                <input class="form-control form-control-sm" asp-for="@Model.Salary" type="number" readonly="readonly" />
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="BeginDate">Fec. Inicio</label>
+                <input class="form-control form-control-sm" asp-for="@Model.BeginDate" type="date" readonly="readonly"/>
+            </div>
+            <div cite="mb-2">
+                <label class="form-label" asp-for="EndDate">Fec. Fin</label>
+                <input class="form-control form-control-sm" asp-for="@Model.EndDate" type="date" readonly="readonly" />
+            </div>
+            <hr />
+            <div cite="mb-2">
+                <a class="btn btn-dark btn-sm" asp-action="Candidate_Query" asp-controller="Candidate" asp-route-idCandidate="@Model.IdCandidate">Volver</a>
+                <hr />
+            </div>
+        </form>
+    </div>
+</div>

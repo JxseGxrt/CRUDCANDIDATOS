@@ -4,7 +4,7 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">@ViewData["Title"]</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
@@ -13,7 +13,7 @@
         <h5>Lista de Candidatos</h5>
     </div>
     <div class="card-body">
-        <a class="btn btn-success btn-sm" asp-action="Candidato_Detalle" asp-controller="Home" asp-route-idCandidato="0">Añadir</a>
+        <a class="btn btn-success btn-sm" asp-action="Candidate_Detail" asp-controller="Candidate" asp-route-idCandidate="0">Añadir</a>
         <hr />
     <table class="table table-striped">
         <thead>
@@ -36,8 +36,9 @@
                     <td>@item.InserDate</td>
                     <td>@item.ModifyDate</td>
                      <td>
-                        <a class="btn btn-primary btn-sm" asp-action="Candidato_Detalle" asp-controller="Home" asp-route-idCandidato="@item.IDCandidate">Editar</a>
-                            <a class="btn btn-danger btn-sm" asp-action="Eliminar" asp-controller="Home" asp-route-idCandidato="@item.IDCandidate">Elinar</a>
+                            <a class="btn btn-success btn-sm" asp-action="Candidate_Query" asp-controller="Candidate" asp-route-idCandidate="@item.IDCandidate">Consultar</a>
+                            <a class="btn btn-primary btn-sm" asp-action="Candidate_Detail" asp-controller="Candidate" asp-route-idCandidate="@item.IDCandidate">Editar</a>
+                            <a class="btn btn-danger btn-sm" asp-action="Candidate_Delete" asp-controller="Candidate" asp-route-idCandidate="@item.IDCandidate">Eliminar</a>
                     </td>
                 </tr>
             }

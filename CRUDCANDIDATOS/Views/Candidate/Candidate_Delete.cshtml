@@ -9,8 +9,8 @@
 
 
 <div class="row">
+    <form asp-action="Candidate_Delete" asp-controller="Candidate" method="post">
     <div class="col-sm-4">
-        <form asp-action="Eliminar" asp-controller="Home" method="post">
             <input type="hidden" asp-for="IDCandidate" />
             <div cite="mb-2">
                 <label class="form-label" asp-for="Name">Nombre</label>
@@ -28,14 +28,13 @@
                 <label class="form-label" asp-for="Email">Correo</label>
                 <input class="form-control form-control-sm" asp-for="Email" type="text" />
             </div>
-
-            <div class="card">
+    </div>
+    <div class="col-sm-8">
+            <div class="card mb-4">
                 <div class="card-header">
                     <h5>Lista de Candidatos</h5>
                 </div>
-                <div class="card-body">
-                    <a class="btn btn-success btn-sm" asp-action="Candidato_Detalle" asp-controller="Home" asp-route-idCandidato="0">Añadir</a>
-                    <hr />
+                <div class="card-body w-50">
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -71,7 +70,7 @@
                    <button class="btn btn-primary btn-sm w-25" type="submit">Eliminar</button>
                     <a class="btn btn-dark btn-sm" asp-action="Index" asp-controller="Home">Volver</a>
                 <hr />
-            </div>
-        </form>
+            </div>     
     </div>
+       </form>
 </div>
